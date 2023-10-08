@@ -1,4 +1,4 @@
-package com.thalisoft.keywork.controller;
+package com.thalisoft.keywork.application.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +9,8 @@ public class MainController {
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("name", "User");
+        model.addAttribute("name", "Keywork");
+        System.out.println(model);
         return "index";
     }
 }
