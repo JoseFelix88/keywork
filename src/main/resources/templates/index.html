@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <meta charset="UTF-8">
-    <title>My First Thymeleaf Template</title>
+    <th:block th:insert="~{layout/head :: page-head}"></th:block>
 </head>
     <body>
         <h1>Welcome to Thymeleaf!</h1>
         <p th:text="'Hello, ' + ${name} + '!'"/>
     </body>
+
+    <th:block th:insert="~{layout/scripts :: page-scripts}"></th:block>
 </html>
