@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>My First Thymeleaf Template</title>
+    <th:block th:insert="~{layout/head :: page-head}"></th:block>
 </head>
-    <body>
-        <h1>Welcome to Thymeleaf!</h1>
-        <p th:text="'Hello, ' + ${name} + '!'"/>
-    </body>
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+        <th:block th:insert="~{layout/loading :: page-spinner}"></th:block>
+        <th:block th:insert="~{layout/menu-left :: page-sidebar-left}"></th:block>
+        <!-- Content Start -->
+        <div class="content">
+
+            <th:block th:insert="~{layout/menu-top :: page-navbar-top}"></th:block>
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h1 th:text="'Bienvenid@, ' + ${name} + '!'"></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+    <th:block th:insert="~{layout/scripts :: page-scripts}"></th:block>
 </html>
