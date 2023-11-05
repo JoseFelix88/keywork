@@ -1,4 +1,3 @@
-    console.log("carge el main.js");
 (function ($) {
     "use strict";
 
